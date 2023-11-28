@@ -2,7 +2,7 @@
 
 let slideHeight = document.documentElement.clientHeight;
 let slideNum = 0;
-let slideCount = 3;
+let slideCount = 4;
 
 document.addEventListener("keydown", (ev) => {
   if (ev.key === "d") {
@@ -17,3 +17,7 @@ document.addEventListener("keydown", (ev) => {
     top: slideHeight * slideNum
   })
 });
+
+window.addEventListener("resize", (ev) => {
+  slideHeight = document.documentElement.clientHeight;
+})
