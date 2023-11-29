@@ -23,6 +23,7 @@
     }
 
     * {
+      font-variant-ligatures: none;
       padding: 0px;
       margin: 0px;
       box-sizing: border-box;
@@ -40,10 +41,9 @@
     }
 
     #tela {
-      top: 0px;
-      left: 0px;
-      right: 0px;
-      bottom: 0px;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
       z-index: -99;
       overflow: hidden;
       -webkit-user-select: none; /* Safari */
@@ -82,12 +82,14 @@
     }
 
     #slides {
-      display: flex;
+      /* display: flex; */
       flex-direction: column;
-      padding: 10vh 10vw;
+      padding: 10vh 10vw 0vh 10vw;
       gap: 20vh;
       color: #fcfcfc;
       font-family: CaskadydiaCove;
+      height: 100vh;
+      overflow-y: auto;
     }
     
     #slides .container {
@@ -100,6 +102,7 @@
       border-color: #fcfcfc;
       border-width: .5rem;
       border-style: double;
+      margin-bottom: 20vh;
     }
 
     #slides .container.titulo {
@@ -277,6 +280,15 @@
     </div>
 
     <div class="container conteudo">
+      <h1>Incluindo o Javascript</h1>
+      Tudo que for relacionado a javascript em HTML sera relacionado a tag &lt;script&gt;
+      <div class="imagens" style="flex-direction: column;">
+        <img src="./src/images/codigo3.png" height="250">
+        <img src="./src/images/codigo4.png" height="126">
+      </div>
+    </div>
+
+    <div class="container conteudo">
       <h1>Javascript propriamente dito</h1>
       <!-- <span class="mini">
         JavaScript® (às vezes abreviado para JS) é uma linguagem leve, 
@@ -414,6 +426,162 @@
         </div>
       </div>
     </div>
+
+    <div class="container conteudo">
+      <h1>Operadores</h1>
+      <ul>
+        <li>
+          Aritméticos
+          <ul>
+            <li>
+              Adição (+) e Substração (-)
+            </li>
+            <li>
+              Multiplicação (*) e Divisão (/)
+            </li>
+            <li>
+              Módulo (%)
+            </li>
+            <li>
+              Incremento (++) e Decremento (--)
+            </li>
+          </ul>
+        </li>
+        <li>
+          Comparação
+          <ul>
+            <li>
+              Menor que (&lt;) e Maior que (&gt;)
+            </li>
+            <li>
+              Menor igual (&lt;=) e Maior igual (&gt;=)
+            </li>
+            <li>
+              Igual (==) e Não igual (!=)
+            </li>
+            <li>
+              Igual 2 (===) (?) e Não igual 2 (!==)
+            </li>
+          </ul>
+          <li>
+            Lógicos
+            <ul>
+              <li>
+                E (&&)
+              </li>
+              <li>
+                OU (||)
+              </li>
+              <li>
+                NÃO (!)
+              </li>
+            </ul>
+        </li>
+
+        <div class="floating-box">
+          <h1>Atenção</h1>
+          <p>
+            Em javascript há 2 formas de comparar se dois elementos são iguais. '==' e '==='
+          </p>
+          <div class="imagens">
+            <img src="src/images/codigo5.png" alt="" width="350" >
+          </div>
+          <p>
+            Um que possui a coerção de tipo e o outro não 
+          </p>
+          <p>
+            ! CUIDADO AO USAR '==', PROCURE USAR '==='
+          </p>
+        </div>
+    </div>
+
+    <div class="container conteudo">
+      <h1>Condicional 1 e 2: if e ternário</h1>
+      <div class="imagens">
+        <img src="src/images/codigo6.png" alt="" height="450">
+      </div>
+    </div>
+
+    <div class="container conteudo">
+      <h1>Condicional 3: switch</h1>
+      <div class="imagens">
+        <img src="src/images/codigo7.png" alt="" height="450">
+      </div>
+    </div>
+
+    <div class="container conteudo">
+      <h1>Array</h1>
+      <ul>
+        <li>
+          Arrays nos permite guardar divertos valores em uma única variavel
+        </li>
+        <li>
+          Arrays em javascript são como listas...
+        </li>
+        <li>
+          <span class="mini">Porém na verdade todos os índices existem</span>
+        </li>
+        <li>
+          <span class="mini">E no fundo elas na verdade são objetos</span>
+        </li>
+      </ul>
+      <div class="imagens">
+        <img src="./src/images/codigo8.png" height="300">
+      </div>
+    </div>
+
+    <div class="container conteudo">
+      <h1>Métodos em Vetores</h1>
+      <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN docs</a>
+      <div class="imagens">
+        <img src="./src/images/codigo9.png" height="300">
+      </div>
+    </div>
+
+    <div class="container conteudo">
+      <h1>Laços 1 e 2: 'while' e 'do while'</h1>
+      <div class="imagens">
+        <img src="./src/images/codigo11.png" height="450">
+      </div>
+    </div>
+
+    <div class="container conteudo">
+      <h1>Laços 3: 'for'</h1>
+      <div class="imagens">
+        <img src="./src/images/codigo10.png" height="450">
+      </div>
+    </div>
+
+    <div class="container conteudo">
+      <h1>Funções</h1>
+      <ul>
+        <li>Entender funções em javascript é fundamental!!!</li>
+        <li>Uma função é um bloco de código que executa uma tarefa específica.</li>
+        <li>
+          A princípio javascript possui funções de primeira classe
+          <ul>
+            <li>Basicamente diz que funções são como valores</li>
+            <li>Um tipo primitivo de dado</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="imagens">
+        <img src="./src/images/codigo12.png" height="300">
+      </div>
+    </div>
+
+    <div class="container conteudo">
+      <h1>Objetos 📦</h1>
+      <ul>
+        <li>Além de entender funções é primordial entender o que são objetos no contexto do javascript.</li>
+        <li>Um objeto se assemelha com um dicionário em python</li>
+        <li>É um tipo de tabela hash</li>
+        <li>Um objeto em javascript é composto por chaves e valores</li>
+      </ul>
+      <div class="imagens">
+        <img src="./src/images/codigo13.png" height="300">
+      </div>
+    </div>
     
     <!-- node.js -->
     <!-- react -->
@@ -429,10 +597,10 @@
 
     //-variaveis----------------------------------------------------------------
 
-    let linhas = 100;
+    let linhas = 50;
     let caracteres = 10;
     let str = "abcdefghijklmnopqrstuvwxyz01234567890!@#$%&*()+-=~<>;:/?\\|       ";
-    let step = 100;
+    let step = 150;
     let espacamento = 12;
     let parallax = 0;
     let randomicidadeX = 0; // 2
@@ -580,7 +748,7 @@
 
           if (state) {
             // console.log(pool[i][j]);
-            pool[i][j].y = (pool[i][j].y + espacamento) % height;
+            pool[i][j].y = (pool[i][j].y + espacamento) % document.documentElement.clientHeight;
             pool[i][j].elem.style.left = `${pool[i][j].x}px`;
             pool[i][j].elem.style.top = `${pool[i][j].y}px`;
           }
