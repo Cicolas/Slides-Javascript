@@ -1,10 +1,11 @@
 //@ts-check
 
+const slideHTML = document.getElementById("slides");
 let slideHeight = document.documentElement.clientHeight;
 let slideNum = 0;
-let slideCount = 4;
+let slideCount = 22;
 
-document.addEventListener("keydown", (ev) => {
+window.addEventListener("keydown", (ev) => {
   if (ev.key === "d") {
     slideNum = Math.min(slideCount - 1, slideNum + 1);
   }
@@ -13,7 +14,7 @@ document.addEventListener("keydown", (ev) => {
     slideNum = Math.max(0, slideNum - 1);
   }
 
-  window.scrollTo({
+  slideHTML?.scrollTo({
     top: slideHeight * slideNum
   })
 });
